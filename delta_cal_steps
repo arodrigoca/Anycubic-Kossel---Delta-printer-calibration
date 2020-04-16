@@ -1,0 +1,44 @@
+ATTACH THE PROBE!
+"Prepare -> Delta Calibration - > Auto Calibration”
+
+Check the probe is working by pushing on the probe as it descends to see if the probe retracts. then turn off and back on again.
+
+"Prepare -> Delta Calibration - > Auto Calibration”
+"Prepare -> Delta Calibration - > Set Delta Height”
+"Prepare -> Delta Calibration - > Store Settings”
+
+REMOVE THE PROBE
+Prepare  -> Move Axis -> Soft Endstops Off
+Prepare  -> Move Axis -> Move Z
+Move the Z axis down to around 5mm and then lower until the feeler gauge won’t fit between the nozzle and the bed.
+
+Note the distance, we will call this “A"
+In my machine “A” = "-2.50”
+
+ "Prepare -> Delta Calibration - > Delta Settings -> Height”
+
+Note the Delta Height value “H”
+“H” = 292.89
+
+Set the New Height to “H” - “A” = 295.39 in my case.
+
+"Prepare -> Auto Home”
+
+“Control -> Motion -> Probe Z Offset”
+Note the distance, we will call this “O”
+“O” = -13.4 in my machine
+My Callipers read the physical dimension of the probe at ~15.7mm at the click of the probe button.
+
+I found that I need to ADD “A” to “O” , so…
+Set the New Probe offset value to -15.9  (“O” + “A”)  (-13.4 + -2.5)
+
+“Control - > Store Settings”
+
+"Prepare -> Auto Home”
+
+IF settings are not correct: Start process from “REMOVE the PROBE” again.
+
+RE-ATTACH THE PROBE for Bed Levelling
+"Prepare -> Level Bed”
+“Control - > Store Settings”
+"Prepare -> Auto Home”
